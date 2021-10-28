@@ -22,25 +22,47 @@
 
 // console.log("程序执行完毕");
 
+
+
+
+// var fs = require("fs");
+// var data = '我是写入文件！\n菜鸟教程官网地址：www.runoob.com';
+
+// // 创建一个可以写入的流，写入到文件 output.txt 中
+// var writerStream = fs.createWriteStream('output.txt');
+
+// // 使用 utf8 编码写入数据
+// writerStream.write(data,'UTF8');
+
+// // 标记文件末尾
+// writerStream.end();
+
+// // 处理流事件 --> finish、error
+// writerStream.on('finish', function() {
+//     console.log("写入完成。");
+// });
+
+// writerStream.on('error', function(err){
+//    console.log(err.stack);
+// });
+
+// console.log("程序执行完毕");
+
+
+// 管道流操作
+
 var fs = require("fs");
-var data = '我是写入文件！\n菜鸟教程官网地址：www.runoob.com';
 
-// 创建一个可以写入的流，写入到文件 output.txt 中
-var writerStream = fs.createWriteStream('output.txt');
+// 创建一个可读流
+var readerStream = fs.createReadStream('input.txt');
 
-// 使用 utf8 编码写入数据
-writerStream.write(data,'UTF8');
+// 创建一个可写流
+var writerStream = fs.createWriteStream('output2.txt');
 
-// 标记文件末尾
-writerStream.end();
-
-// 处理流事件 --> finish、error
-writerStream.on('finish', function() {
-    console.log("写入完成。");
-});
-
-writerStream.on('error', function(err){
-   console.log(err.stack);
-});
+// 管道读写操作
+// 读取 input.txt 文件内容，并将内容写入到 output.txt 文件中
+readerStream.pipe(writerStream);
 
 console.log("程序执行完毕");
+
+
