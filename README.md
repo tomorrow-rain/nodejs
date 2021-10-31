@@ -10,3 +10,6 @@
 
 10.30  学习：全局对象，常用工具，文件系统
        （学习nodejs第三天）
+
+10.31  学习：GET/POST请求，工具模块（OS、Path、Net、DNS、Domain），Web模块
+       （学习nodejs第四天）
