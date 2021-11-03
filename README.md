@@ -16,3 +16,6 @@
 
 11.2  学习：Express框架，RESTful API
        （更新node及npm版本，学习nodejs第五天）
+
+11.3  学习：多进程，JXcore，Mysql，MongoDB
+       （安装了Mysql和MonoDB，简单阅读了代码，没有实验；JXcore简单看了，没有实际操作。学习nodejs第六天）
